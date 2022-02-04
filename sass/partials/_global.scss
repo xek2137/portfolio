@@ -1,0 +1,45 @@
+/* Global */
+* {
+	box-sizing: border-box;
+	font-family: $font-one;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: #fff;
+	scroll-behavior: smooth;
+	background-repeat: no-repeat;
+	background-image: $color-backhround-html;
+}
+
+body {
+	min-height: 100%;
+	transition: 0.5 all;
+	margin: 0;
+	overflow: overlay;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.flexer-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
