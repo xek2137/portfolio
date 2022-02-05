@@ -12,7 +12,7 @@
 .nav-bar {
 	position: relative;
 	height: calc(3rem + 1rem);
-	max-width: 1100px;
+	max-width: 1400px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -21,21 +21,29 @@
 	padding: 0 20px;
 	transition: 0.6 ease;
 	.logo {
-		font-size: 24px;
-		font-weight: 500;
+		font-size: 32px;
+		font-weight: 400;
+		transition: 0.5s all;
+		&:hover {
+			text-shadow: 0 0 2px #fff, 0 0 30px #00aeff, 0 0 35px #00aeff;
+		}
 	}
 	.navigation {
 		.nav-elements {
 			a {
-				color: rgb(190, 6, 6);
-				margin-right: 24px;
-				padding-right: 24px;
+				font-size: 15px;
+				font-weight: 300;
+				margin-right: 32px;
+				padding-right: 32px;
+				letter-spacing: 1px;
+				transition: 0.7s all;
 				&:hover {
-					color: rgb(71, 2, 2);
+					text-shadow: $glow-link-hover;
 				}
 			}
 			a.active {
-				color: $color-two;
+				text-shadow: $glow-link-active;
+				transition: 0.7s all;
 			}
 		}
 	}
@@ -46,7 +54,7 @@
 }
 
 .sticky {
-	background: rgba(1, 14, 59, 0.219);
+	background: rgba(55, 78, 85, 0.151);
 	box-shadow: $box-shadow;
 	.nav-bar {
 		height: calc(2rem + 2rem);
@@ -54,7 +62,6 @@
 }
 
 /* Media query */
-
 @media screen and (max-width: 1140px) {
 	.nav-bar {
 		.navigation {
@@ -77,14 +84,26 @@
 				display: flex;
 				align-items: center;
 				flex-direction: column;
-				margin: 20px;
-				padding: 40px;
+				margin: 30px;
+				padding: 50px;
 				border-radius: 10px;
 				box-shadow: $box-shadow;
 				transition: 1s all;
 				transform: translateY(-20px);
 				a {
 					margin: 15px 50px;
+					color: #000;
+					font-size: 18px;
+					font-weight: 400;
+					&:hover {
+						color: rgb(4, 175, 255);
+						text-shadow: none;
+					}
+				}
+				a.active {
+					color: rgb(4, 175, 255);
+					transition: 0.7s all;
+					text-shadow: none;
 				}
 			}
 		}

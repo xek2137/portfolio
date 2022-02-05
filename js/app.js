@@ -3,9 +3,7 @@
 
 	window.addEventListener('scroll', () => {
 		const header = document.querySelector('header')
-		// const btnScrollDown = document.querySelector('.scroll-down')
 		header.classList.toggle('sticky', window.scrollY > 0)
-		// btnScrollDown.classList.toggle('hide', window.scrollY > 0)
 	})
 
 	const projectsModels = document.querySelectorAll('.projects-model')
@@ -52,15 +50,19 @@
 	})
 
 	const menuBtn = document.querySelector('.nav-menu-btn')
-	const closeBtn = document.querySelector('.nav-close-btn')
 	const navigation = document.querySelector('.navigation')
+	const navElements = document.querySelectorAll(
+		'.nav-elements div, .nav-elements a'
+	)
+
+	navElements.forEach(e => {
+		e.addEventListener('click', () => {
+			navigation.classList.remove('active')
+		})
+	})
 
 	menuBtn.addEventListener('click', () => {
 		navigation.classList.toggle('active')
-	})
-
-	closeBtn.addEventListener('click', () => {
-		navigation.classList.remove('active')
 	})
 
 	ScrollReveal({
